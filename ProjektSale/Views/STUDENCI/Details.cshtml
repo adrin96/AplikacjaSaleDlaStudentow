@@ -1,0 +1,50 @@
+﻿@model ProjektSale.STUDENCI
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>STUDENCI</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IMIE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IMIE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NAZWISKO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NAZWISKO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NR_TELEFONU)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NR_TELEFONU)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KIERUNKI.NAZWA_KIERUNKU)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KIERUNKI.NAZWA_KIERUNKU)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.NR_ALBUMU }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

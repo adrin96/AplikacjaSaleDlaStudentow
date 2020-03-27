@@ -1,0 +1,138 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6AADA62B-996A-0385-70C2-36FC713D3F22" name="PRACOWNIK">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:38:48 UTC</createdTime>
+<generatorID>2B091EC2-A5B3-6C1B-DC54-1A56C0A88391</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_PRACOWNIKA" id="BC35636B-A296-BBA6-4E9D-E915A52A16EB">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:38:48 UTC</createdTime>
+<generatorID>DD70BBD1-26CE-BA61-76B5-A360834CAAD1</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IMIE" id="9925C83D-F586-DCBE-44EC-1A1B6E9C3D8D">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:38:48 UTC</createdTime>
+<generatorID>976C0EAA-1403-189D-3937-94B9C3CF058D</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NAZWISKO" id="947D0F71-8E4D-E69B-5599-CE5291350C32">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:38:48 UTC</createdTime>
+<generatorID>8F9CE3E6-44BC-85E8-8D34-5CAE8090B7E5</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATA_ZATRUDNIENIA" id="83F58AB4-CAE6-6E8B-D141-8C7EFC2DFA2A">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:38:48 UTC</createdTime>
+<generatorID>E68BB57A-ED8F-ADF6-24BB-EC1E44CD764F</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PENSJA" id="1B1B4896-AD00-B509-DC26-EE7A2A1140B2">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:38:48 UTC</createdTime>
+<generatorID>E511E766-836E-AF81-477D-33F6EDC33E10</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRACOWNIK_ID_PRACOWNIKA" id="8B097B74-4DBA-2421-E0FC-70292B627BE0">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:38:48 UTC</createdTime>
+<generatorID>6E1DBF23-3514-A0BE-1A13-3A6CED95C722</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AF437855-815A-6D91-5220-1DC154FF705D" referredColumn="BC35636B-A296-BBA6-4E9D-E915A52A16EB"/>
+</associations>
+</Column>
+<Column name="BIURO_ID_BIURA" id="3CFBAD28-7F27-CAC3-C5F4-3A7ED9245E0B">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:38:48 UTC</createdTime>
+<generatorID>05CB9530-71A8-47D5-C931-8F4A4C021A4B</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="ECEB5D29-F610-9F9F-23EF-E846F3417F82" referredColumn="4C935D2D-20D3-2418-05B2-A3F501E872F4"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A68F4501-467A-9A44-38CA-1735C401A46C" name="PRACOWNIK_PK">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:38:48 UTC</createdTime>
+<generatorID>EC5B463C-AC74-7EA0-D896-EA57F83BC1CB</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BC35636B-A296-BBA6-4E9D-E915A52A16EB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A3585EC8-2376-357F-9DED-C2871F14F0E1" name="PRACOWNIK_PRACOWNIK_FK">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:38:48 UTC</createdTime>
+<generatorID>187D8298-F96D-BB37-8816-49988884ADD9</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8B097B74-4DBA-2421-E0FC-70292B627BE0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7098B844-A0A8-550F-3B60-F162B9CB64D2" name="PRACOWNIK_BIURO_FK">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:38:48 UTC</createdTime>
+<generatorID>A5695805-CEF3-C53C-E14B-5ADB99661960</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3CFBAD28-7F27-CAC3-C5F4-3A7ED9245E0B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

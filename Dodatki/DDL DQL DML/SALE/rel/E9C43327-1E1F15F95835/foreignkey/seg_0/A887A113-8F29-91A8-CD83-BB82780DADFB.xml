@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A887A113-8F29-91A8-CD83-BB82780DADFB" containerWithKeyObject="3F3F39A9-A607-F051-1505-C09FC95E7BEC" localFKIndex="9A17FF14-7DF5-22E9-6A64-0A5D47F74027" name="REZERWACJE_PRACOWNIK_FK">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:56:50 UTC</createdTime>
+<generatorID>D9D56268-4EA8-B2A7-3F6F-123D6D649A34</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>9EB557FD-BEDE-92B9-DC71-1A768648E18D</referredTableID>
+<keyObject>053E4598-F280-9A16-E582-C93B5982E8D1</keyObject>
+<referredKeyID>053E4598-F280-9A16-E582-C93B5982E8D1</referredKeyID>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

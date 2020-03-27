@@ -1,0 +1,66 @@
+﻿@model ProjektSale.REZERWACJE
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>REZERWACJE</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.REZERWACJA_OD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.REZERWACJA_OD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.REZERWACJA_DO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.REZERWACJA_DO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CENA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CENA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRACOWNICY.IMIE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRACOWNICY.IMIE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SALE.NAZWA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SALE.NAZWA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.STUDENCI.IMIE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.STUDENCI.IMIE)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_REZERWACJI }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

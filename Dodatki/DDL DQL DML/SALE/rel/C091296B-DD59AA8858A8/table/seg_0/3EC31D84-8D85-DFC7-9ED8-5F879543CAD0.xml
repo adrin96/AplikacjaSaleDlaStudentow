@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3EC31D84-8D85-DFC7-9ED8-5F879543CAD0" name="KIERUNEK">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:38:48 UTC</createdTime>
+<generatorID>8D538C75-EF4F-59A6-256A-3DF850EBEA9C</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_KIERUNKU" id="57708EB7-48ED-A101-0D17-AAB5EF9784E1">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:38:48 UTC</createdTime>
+<generatorID>C32F2D66-7223-908B-2B5B-68E6431A6559</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NAZWA_KIERUNKU" id="9811E852-6EC8-BC64-7840-FC90D1058DDE">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:38:48 UTC</createdTime>
+<generatorID>4ADB758E-2270-65D5-45FA-9D49AEED4D79</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TYP_STUDIOW" id="53675AFB-D5CF-1C3A-C473-53580697EF2B">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:38:48 UTC</createdTime>
+<generatorID>9A17BE32-3DD2-9E22-59A7-7DCAF445EE92</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CZAS_TRWANIA" id="14AC4C1D-8752-ACD8-9482-C34D81ED8333">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:38:48 UTC</createdTime>
+<generatorID>88982A22-5BAA-F771-19FC-55251F4CF9C6</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="KIERUNEK_ID" id="DD926708-FF7B-E02D-7910-25C18AEB5D0B">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:38:48 UTC</createdTime>
+<ownerDesignName>SALE</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8A72D414-E506-2DF3-81DF-3A8DAEA57BD5" name="KIERUNEK_PK">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:38:48 UTC</createdTime>
+<ownerDesignName>SALE</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="DD926708-FF7B-E02D-7910-25C18AEB5D0B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

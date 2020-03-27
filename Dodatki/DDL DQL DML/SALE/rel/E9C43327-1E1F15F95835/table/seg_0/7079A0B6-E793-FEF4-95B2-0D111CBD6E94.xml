@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7079A0B6-E793-FEF4-95B2-0D111CBD6E94" name="BIURO">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:56:50 UTC</createdTime>
+<generatorID>6E9348F1-4F9A-212E-ACF7-47A88D48AD04</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_BIURA" id="0B99AD9A-13DD-0A66-13A3-5D9A8D61CC40">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:56:50 UTC</createdTime>
+<generatorID>67FB0340-95D9-909C-8C73-150D7096C959</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NAZWA" id="EFBE7EFA-7B9D-DD23-E3F6-7A2369EF8127">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:56:50 UTC</createdTime>
+<generatorID>2FB9EA55-C54E-8A5D-3187-A7B8FF67F868</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ADRES" id="3899261F-CB04-D2DC-C335-86987EDF621F">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:56:50 UTC</createdTime>
+<generatorID>F3D3C7A3-245C-90D0-A292-7887A47A8CB4</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E4F1681B-3AE5-26B8-B250-038A3CD5C88E" name="BIURO_PK">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:56:50 UTC</createdTime>
+<generatorID>59FA8FDA-A9A1-19DA-084F-139A9925FE01</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0B99AD9A-13DD-0A66-13A3-5D9A8D61CC40"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

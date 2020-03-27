@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="DAD4EDDB-BABF-20E9-9763-47897ECF89B8" containerWithKeyObject="9B0EF600-2FF7-741D-0AC2-CFD64895E320" localFKIndex="7521BCFA-96B4-F3CB-9E34-EB30CC33F37B" name="PRZEDMIOT_SALA_FK">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:56:50 UTC</createdTime>
+<generatorID>C593BBA4-48A4-5D4B-E8BD-119B7F6935A4</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>A858007A-8F9D-D240-90F5-0F4EEBDF711D</referredTableID>
+<keyObject>DF1E8554-8BEF-3AFF-1599-9EA1E34A37BD</keyObject>
+<referredKeyID>DF1E8554-8BEF-3AFF-1599-9EA1E34A37BD</referredKeyID>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

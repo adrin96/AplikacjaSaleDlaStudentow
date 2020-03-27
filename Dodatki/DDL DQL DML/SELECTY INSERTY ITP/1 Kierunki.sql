@@ -1,0 +1,10 @@
+Insert into Kierunki (ID_KIERUNKU,NAZWA_KIERUNKU,TYP_STUDIOW,CZAS_TRWANIA) values ('1','Informatyka','Inzynierskie   ','3.5');
+Insert into Kierunki (ID_KIERUNKU,NAZWA_KIERUNKU,TYP_STUDIOW,CZAS_TRWANIA) values (2,'Zarzadzanie','Licencjackie   ',3);
+Insert into Kierunki (ID_KIERUNKU,NAZWA_KIERUNKU,TYP_STUDIOW,CZAS_TRWANIA) values ('3','Pedagogika','Licencjackie   ','3');
+Insert into Kierunki (ID_KIERUNKU,NAZWA_KIERUNKU,TYP_STUDIOW,CZAS_TRWANIA) values ('4','Polonistyka','Licencjackie   ','3');
+Insert into Kierunki (ID_KIERUNKU,NAZWA_KIERUNKU,TYP_STUDIOW,CZAS_TRWANIA) values ('5','Filologia angielska','Licencjackie   ','3');
+Insert into Kierunki (ID_KIERUNKU,NAZWA_KIERUNKU,TYP_STUDIOW,CZAS_TRWANIA) values ('6','Budownictwo','Inzynierskie   ','3.5');
+Insert into Kierunki (ID_KIERUNKU,NAZWA_KIERUNKU,TYP_STUDIOW,CZAS_TRWANIA) values ('7','Energetyka','Inzynierskie   ','3.5');
+Insert into Kierunki (ID_KIERUNKU,NAZWA_KIERUNKU,TYP_STUDIOW,CZAS_TRWANIA) values ('8','Mechanika','Inzynierskie   ','3.5');
+Insert into Kierunki (ID_KIERUNKU,NAZWA_KIERUNKU,TYP_STUDIOW,CZAS_TRWANIA) values ('9','Zielarstwo','Inzynierskie   ','3.5');
+Insert into Kierunki (ID_KIERUNKU,NAZWA_KIERUNKU,TYP_STUDIOW,CZAS_TRWANIA) values ('10','Pielegniarstwo','Licencjackie   ','5');

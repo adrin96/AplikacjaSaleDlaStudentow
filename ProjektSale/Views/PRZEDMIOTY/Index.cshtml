@@ -1,0 +1,51 @@
+﻿@model IEnumerable<ProjektSale.PRZEDMIOTY>
+
+@{
+    ViewBag.Title = "Przedmioty";
+}
+
+<h2>Lista przedmiotów</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NAZWA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OPIS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ILOSC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SALE.NAZWA)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NAZWA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OPIS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ILOSC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SALE.NAZWA)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_PRZEDMIOTU }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_PRZEDMIOTU }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_PRZEDMIOTU })
+        </td>
+    </tr>
+}
+
+</table>

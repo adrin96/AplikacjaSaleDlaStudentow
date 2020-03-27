@@ -1,0 +1,74 @@
+﻿@model ProjektSale.PRACOWNICY
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PRACOWNICY</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IMIE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IMIE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NAZWISKO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NAZWISKO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PENSJA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PENSJA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DATA_ZATRUDNIENIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DATA_ZATRUDNIENIA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.STANOWISKO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.STANOWISKO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BIURA.NAZWA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BIURA.NAZWA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRACOWNICY2.IMIE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRACOWNICY2.IMIE)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_PRACOWNIKA }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

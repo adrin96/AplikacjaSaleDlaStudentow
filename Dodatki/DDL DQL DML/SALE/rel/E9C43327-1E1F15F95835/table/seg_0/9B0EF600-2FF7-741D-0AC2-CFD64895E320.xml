@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9B0EF600-2FF7-741D-0AC2-CFD64895E320" name="PRZEDMIOT">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:56:50 UTC</createdTime>
+<generatorID>7D011B2E-39DE-A4C6-3CF7-E4CE8D624F6A</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_PRZEDMIOTU" id="F1DC96B0-B297-7D71-8FE0-05A1B192A203">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:56:50 UTC</createdTime>
+<generatorID>EB3FA0AB-D2A5-6834-D265-8730799293EE</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NAZWA" id="59686871-C87B-161F-DFC6-4FF0B43754DA">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:56:50 UTC</createdTime>
+<generatorID>08D1444D-DBFC-7F33-02EB-D8429AF01701</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OPIS" id="6B2BFA55-4792-35DB-A0EA-2750DDB0E1AF">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:56:50 UTC</createdTime>
+<generatorID>BC211C58-2C3C-757F-64ED-7270CE4EE3AE</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT028</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ILOSC" id="18D69960-6DB4-7E01-E6A2-C9236B7CD264">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 16:47:38 UTC</createdTime>
+<ownerDesignName>SALE</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_SALI" id="6B7B9959-3169-FB41-7239-827783CCD785">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:56:50 UTC</createdTime>
+<generatorID>042F3992-B2D7-51A1-0A83-5276AD96E78D</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DAD4EDDB-BABF-20E9-9763-47897ECF89B8" referredColumn="2AA56132-CBF6-28D6-3650-157174E24B4B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="26F27FB4-622E-27FD-43FA-6E2ADB85989E" name="PRZEDMIOT_PK">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:56:50 UTC</createdTime>
+<generatorID>3C155689-9970-AFEE-5FD5-F97DBE903469</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F1DC96B0-B297-7D71-8FE0-05A1B192A203"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7521BCFA-96B4-F3CB-9E34-EB30CC33F37B" name="PRZEDMIOT_SALA_FK">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:56:50 UTC</createdTime>
+<generatorID>C593BBA4-48A4-5D4B-E8BD-119B7F6935A4</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6B7B9959-3169-FB41-7239-827783CCD785"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

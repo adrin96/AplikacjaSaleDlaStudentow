@@ -1,0 +1,150 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3F3F39A9-A607-F051-1505-C09FC95E7BEC" name="REZERWACJE">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:56:50 UTC</createdTime>
+<generatorID>2730CAE0-8695-D288-204D-4DBAB1DCCB5B</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_REZERWACJI" id="7C00FF34-6CB5-E52D-8BC0-B332E86BE2C9">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:56:50 UTC</createdTime>
+<generatorID>8EA36FFC-C309-D7DA-6121-A3FF764894CF</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REZERWACJA_OD" id="DA27E5A0-0035-0AC3-4A80-F56C933DCD56">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:56:50 UTC</createdTime>
+<generatorID>757AE86D-A0E7-F2F4-D446-97634AE1D722</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REZERWACJA_DO" id="B3D70B93-65CE-50EC-1E35-B5A2CD85DB88">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:56:50 UTC</createdTime>
+<generatorID>42291688-ACBA-CD25-E5FB-A5B55FA64BEE</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CENA" id="3D5D6CBB-8D03-132D-2AF7-48BCD8068B38">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:56:50 UTC</createdTime>
+<generatorID>B2305768-8391-76CE-E13D-0CD481D8FA3A</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NR_ALBUMU" id="A708AA41-8BBF-7623-648E-D13A00124453">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:56:50 UTC</createdTime>
+<generatorID>7CAA7D71-6E7E-598B-D114-2F6BD23BDB87</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2C4FCC56-4ED1-E5DD-A4F7-B05920D8B7EE" referredColumn="7B35AD35-3F13-ADE2-F8F0-4EA11AA90EFD"/>
+</associations>
+</Column>
+<Column name="ID_SALI" id="5D889142-B6FF-71AD-DD59-CE50E892D22B">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:56:50 UTC</createdTime>
+<generatorID>CB95CA80-BD76-0BC1-BAEC-4DE7ACFA9669</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="519A5186-B1D5-ACAB-1421-99334C56FB60" referredColumn="2AA56132-CBF6-28D6-3650-157174E24B4B"/>
+</associations>
+</Column>
+<Column name="ID_PRACOWNIKA" id="E4584222-F06C-C597-DE50-140E7A08217C">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:56:50 UTC</createdTime>
+<generatorID>945C9047-AE2A-F842-3FCB-6ED7DD7D5756</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A887A113-8F29-91A8-CD83-BB82780DADFB" referredColumn="1CC91658-C74E-CCFC-E7CE-6CB75003313B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1CAC3CC1-704F-9133-F83D-76630B5F76E8" name="REZERWACJE_PK">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:56:50 UTC</createdTime>
+<generatorID>FEAFF46D-DEFE-6B51-3830-1E33D2D0EDBA</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7C00FF34-6CB5-E52D-8BC0-B332E86BE2C9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="51A2F645-2A42-C4D6-A970-07BF7EE2865E" name="REZERWACJE_SALA_FK">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:56:50 UTC</createdTime>
+<generatorID>087EE726-F922-B32D-FC48-3F083FB5D4F3</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5D889142-B6FF-71AD-DD59-CE50E892D22B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9A17FF14-7DF5-22E9-6A64-0A5D47F74027" name="REZERWACJE_PRACOWNIK_FK">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:56:50 UTC</createdTime>
+<generatorID>D9D56268-4EA8-B2A7-3F6F-123D6D649A34</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E4584222-F06C-C597-DE50-140E7A08217C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FDE007BB-89F2-EE51-2A88-6434635C72FE" name="REZERWACJE_STUDENT_FK">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:56:50 UTC</createdTime>
+<generatorID>F7389E86-AFE3-0E7C-7930-27BD2DA04ED4</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A708AA41-8BBF-7623-648E-D13A00124453"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProjektSaleModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BIURA">
+    <Key>
+      <PropertyRef Name="ID_BIURA" />
+    </Key>
+    <Property Name="ID_BIURA" Type="Int32" Nullable="false" />
+    <Property Name="NAZWA" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ADRES" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="PRACOWNICY" Relationship="Self.PRACOWNIK_BIURO_FK" FromRole="BIURA" ToRole="PRACOWNICY" />
+  </EntityType>
+  <EntityType Name="KIERUNKI">
+    <Key>
+      <PropertyRef Name="ID_KIERUNKU" />
+    </Key>
+    <Property Name="ID_KIERUNKU" Type="Int32" Nullable="false" />
+    <Property Name="NAZWA_KIERUNKU" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TYP_STUDIOW" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="CZAS_TRWANIA" Type="Decimal" Precision="4" Scale="2" Nullable="false" />
+    <NavigationProperty Name="STUDENCI" Relationship="Self.STUDENT_KIERUNEK_FK" FromRole="KIERUNKI" ToRole="STUDENCI" />
+  </EntityType>
+  <EntityType Name="PRACOWNICY">
+    <Key>
+      <PropertyRef Name="ID_PRACOWNIKA" />
+    </Key>
+    <Property Name="ID_PRACOWNIKA" Type="Int32" Nullable="false" />
+    <Property Name="IMIE" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NAZWISKO" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PENSJA" Type="Single" Nullable="false" />
+    <Property Name="DATA_ZATRUDNIENIA" Type="DateTime" Precision="0" />
+    <Property Name="ID_BIURA" Type="Int32" Nullable="false" />
+    <Property Name="ID_PRZELOZONEGO" Type="Int32" />
+    <Property Name="STANOWISKO" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="BIURA" Relationship="Self.PRACOWNIK_BIURO_FK" FromRole="PRACOWNICY" ToRole="BIURA" />
+    <NavigationProperty Name="PRACOWNICY1" Relationship="Self.PRACOWNIK_PRACOWNIK_FK" FromRole="PRACOWNICY" ToRole="PRACOWNICY1" />
+    <NavigationProperty Name="PRACOWNICY2" Relationship="Self.PRACOWNIK_PRACOWNIK_FK" FromRole="PRACOWNICY1" ToRole="PRACOWNICY" />
+    <NavigationProperty Name="REZERWACJE" Relationship="Self.REZERWACJE_PRACOWNIK_FK" FromRole="PRACOWNICY" ToRole="REZERWACJE" />
+  </EntityType>
+  <EntityType Name="PRZEDMIOTY">
+    <Key>
+      <PropertyRef Name="ID_PRZEDMIOTU" />
+    </Key>
+    <Property Name="ID_PRZEDMIOTU" Type="Int32" Nullable="false" />
+    <Property Name="NAZWA" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OPIS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ILOSC" Type="Decimal" Precision="4" Scale="0" Nullable="false" />
+    <Property Name="ID_SALI" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="SALE" Relationship="Self.PRZEDMIOT_SALA_FK" FromRole="PRZEDMIOTY" ToRole="SALE" />
+  </EntityType>
+  <EntityType Name="REZERWACJE">
+    <Key>
+      <PropertyRef Name="ID_REZERWACJI" />
+    </Key>
+    <Property Name="ID_REZERWACJI" Type="Int32" Nullable="false" />
+    <Property Name="REZERWACJA_OD" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="REZERWACJA_DO" Type="DateTime" Precision="0" />
+    <Property Name="CENA" Type="Single" Nullable="false" />
+    <Property Name="NR_ALBUMU" Type="Int32" Nullable="false" />
+    <Property Name="ID_SALI" Type="Int32" Nullable="false" />
+    <Property Name="ID_PRACOWNIKA" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="PRACOWNICY" Relationship="Self.REZERWACJE_PRACOWNIK_FK" FromRole="REZERWACJE" ToRole="PRACOWNICY" />
+    <NavigationProperty Name="SALE" Relationship="Self.REZERWACJE_SALA_FK" FromRole="REZERWACJE" ToRole="SALE" />
+    <NavigationProperty Name="STUDENCI" Relationship="Self.REZERWACJE_STUDENT_FK" FromRole="REZERWACJE" ToRole="STUDENCI" />
+  </EntityType>
+  <EntityType Name="SALE">
+    <Key>
+      <PropertyRef Name="ID_SALI" />
+    </Key>
+    <Property Name="ID_SALI" Type="Int32" Nullable="false" />
+    <Property Name="NAZWA" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OPIS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="PRZEDMIOTY" Relationship="Self.PRZEDMIOT_SALA_FK" FromRole="SALE" ToRole="PRZEDMIOTY" />
+    <NavigationProperty Name="REZERWACJE" Relationship="Self.REZERWACJE_SALA_FK" FromRole="SALE" ToRole="REZERWACJE" />
+  </EntityType>
+  <EntityType Name="STUDENCI">
+    <Key>
+      <PropertyRef Name="NR_ALBUMU" />
+    </Key>
+    <Property Name="NR_ALBUMU" Type="Int32" Nullable="false" />
+    <Property Name="IMIE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NAZWISKO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NR_TELEFONU" Type="Decimal" Precision="9" Scale="0" />
+    <Property Name="ID_KIERUNKU" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="KIERUNKI" Relationship="Self.STUDENT_KIERUNEK_FK" FromRole="STUDENCI" ToRole="KIERUNKI" />
+    <NavigationProperty Name="REZERWACJE" Relationship="Self.REZERWACJE_STUDENT_FK" FromRole="STUDENCI" ToRole="REZERWACJE" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="PracownicyPracownicze">
+    <Key>
+      <PropertyRef Name="Imie" />
+      <PropertyRef Name="Nazwisko" />
+    </Key>
+    <Property Name="NazwaBiura" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Adres" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Imie" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nazwisko" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <Association Name="PRACOWNIK_BIURO_FK">
+    <End Role="BIURA" Type="Self.BIURA" Multiplicity="1" />
+    <End Role="PRACOWNICY" Type="Self.PRACOWNICY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BIURA">
+        <PropertyRef Name="ID_BIURA" />
+      </Principal>
+      <Dependent Role="PRACOWNICY">
+        <PropertyRef Name="ID_BIURA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="STUDENT_KIERUNEK_FK">
+    <End Role="KIERUNKI" Type="Self.KIERUNKI" Multiplicity="1" />
+    <End Role="STUDENCI" Type="Self.STUDENCI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KIERUNKI">
+        <PropertyRef Name="ID_KIERUNKU" />
+      </Principal>
+      <Dependent Role="STUDENCI">
+        <PropertyRef Name="ID_KIERUNKU" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PRACOWNIK_PRACOWNIK_FK">
+    <End Role="PRACOWNICY" Type="Self.PRACOWNICY" Multiplicity="0..1" />
+    <End Role="PRACOWNICY1" Type="Self.PRACOWNICY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRACOWNICY">
+        <PropertyRef Name="ID_PRACOWNIKA" />
+      </Principal>
+      <Dependent Role="PRACOWNICY1">
+        <PropertyRef Name="ID_PRZELOZONEGO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="REZERWACJE_PRACOWNIK_FK">
+    <End Role="PRACOWNICY" Type="Self.PRACOWNICY" Multiplicity="1" />
+    <End Role="REZERWACJE" Type="Self.REZERWACJE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRACOWNICY">
+        <PropertyRef Name="ID_PRACOWNIKA" />
+      </Principal>
+      <Dependent Role="REZERWACJE">
+        <PropertyRef Name="ID_PRACOWNIKA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PRZEDMIOT_SALA_FK">
+    <End Role="SALE" Type="Self.SALE" Multiplicity="1" />
+    <End Role="PRZEDMIOTY" Type="Self.PRZEDMIOTY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SALE">
+        <PropertyRef Name="ID_SALI" />
+      </Principal>
+      <Dependent Role="PRZEDMIOTY">
+        <PropertyRef Name="ID_SALI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="REZERWACJE_SALA_FK">
+    <End Role="SALE" Type="Self.SALE" Multiplicity="1" />
+    <End Role="REZERWACJE" Type="Self.REZERWACJE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SALE">
+        <PropertyRef Name="ID_SALI" />
+      </Principal>
+      <Dependent Role="REZERWACJE">
+        <PropertyRef Name="ID_SALI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="REZERWACJE_STUDENT_FK">
+    <End Role="STUDENCI" Type="Self.STUDENCI" Multiplicity="1" />
+    <End Role="REZERWACJE" Type="Self.REZERWACJE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="STUDENCI">
+        <PropertyRef Name="NR_ALBUMU" />
+      </Principal>
+      <Dependent Role="REZERWACJE">
+        <PropertyRef Name="NR_ALBUMU" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ProjektSaleEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BIURA" EntityType="Self.BIURA" />
+    <EntitySet Name="KIERUNKI" EntityType="Self.KIERUNKI" />
+    <EntitySet Name="PRACOWNICY" EntityType="Self.PRACOWNICY" />
+    <EntitySet Name="PRZEDMIOTY" EntityType="Self.PRZEDMIOTY" />
+    <EntitySet Name="REZERWACJE" EntityType="Self.REZERWACJE" />
+    <EntitySet Name="SALE" EntityType="Self.SALE" />
+    <EntitySet Name="STUDENCI" EntityType="Self.STUDENCI" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="PracownicyPracownicze" EntityType="Self.PracownicyPracownicze" />
+    <AssociationSet Name="PRACOWNIK_BIURO_FK" Association="Self.PRACOWNIK_BIURO_FK">
+      <End Role="BIURA" EntitySet="BIURA" />
+      <End Role="PRACOWNICY" EntitySet="PRACOWNICY" />
+    </AssociationSet>
+    <AssociationSet Name="STUDENT_KIERUNEK_FK" Association="Self.STUDENT_KIERUNEK_FK">
+      <End Role="KIERUNKI" EntitySet="KIERUNKI" />
+      <End Role="STUDENCI" EntitySet="STUDENCI" />
+    </AssociationSet>
+    <AssociationSet Name="PRACOWNIK_PRACOWNIK_FK" Association="Self.PRACOWNIK_PRACOWNIK_FK">
+      <End Role="PRACOWNICY" EntitySet="PRACOWNICY" />
+      <End Role="PRACOWNICY1" EntitySet="PRACOWNICY" />
+    </AssociationSet>
+    <AssociationSet Name="REZERWACJE_PRACOWNIK_FK" Association="Self.REZERWACJE_PRACOWNIK_FK">
+      <End Role="PRACOWNICY" EntitySet="PRACOWNICY" />
+      <End Role="REZERWACJE" EntitySet="REZERWACJE" />
+    </AssociationSet>
+    <AssociationSet Name="PRZEDMIOT_SALA_FK" Association="Self.PRZEDMIOT_SALA_FK">
+      <End Role="SALE" EntitySet="SALE" />
+      <End Role="PRZEDMIOTY" EntitySet="PRZEDMIOTY" />
+    </AssociationSet>
+    <AssociationSet Name="REZERWACJE_SALA_FK" Association="Self.REZERWACJE_SALA_FK">
+      <End Role="SALE" EntitySet="SALE" />
+      <End Role="REZERWACJE" EntitySet="REZERWACJE" />
+    </AssociationSet>
+    <AssociationSet Name="REZERWACJE_STUDENT_FK" Association="Self.REZERWACJE_STUDENT_FK">
+      <End Role="STUDENCI" EntitySet="STUDENCI" />
+      <End Role="REZERWACJE" EntitySet="REZERWACJE" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(ProjektSaleModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(ProjektSaleModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <EntitySet Name="osobyZarzadzanie" EntityType="ProjektSaleModel.osobyZarzadzanie" />
+    <EntitySet Name="rezerwacjeImprezowa" EntityType="ProjektSaleModel.rezerwacjeImprezowa" />
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="osobyZarzadzanie">
+    <Key>
+      <PropertyRef Name="Imie" />
+      <PropertyRef Name="Nazwisko" />
+      <PropertyRef Name="Nr_albumu" />
+    </Key>
+    <Property Name="Imie" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Nazwisko" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Nr_albumu" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="rezerwacjeImprezowa">
+    <Key>
+      <PropertyRef Name="ImieStudenta" />
+      <PropertyRef Name="NazwiskoStudenta" />
+      <PropertyRef Name="Nr_albumu" />
+      <PropertyRef Name="ImiePracownika" />
+      <PropertyRef Name="NazwiskoPracownika" />
+      <PropertyRef Name="Nazwa" />
+    </Key>
+    <Property Name="ImieStudenta" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="NazwiskoStudenta" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Nr_albumu" Type="Int32" Nullable="false" />
+    <Property Name="ImiePracownika" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="NazwiskoPracownika" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Nazwa" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

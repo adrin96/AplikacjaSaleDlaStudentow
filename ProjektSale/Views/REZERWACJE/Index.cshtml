@@ -1,0 +1,63 @@
+﻿@model IEnumerable<ProjektSale.REZERWACJE>
+
+@{
+    ViewBag.Title = "Rezerwacje";
+}
+
+<h2>Lista rezerwacji</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.REZERWACJA_OD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.REZERWACJA_DO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CENA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRACOWNICY.IMIE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SALE.NAZWA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STUDENCI.IMIE)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.REZERWACJA_OD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.REZERWACJA_DO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CENA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRACOWNICY.IMIE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SALE.NAZWA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.STUDENCI.IMIE)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_REZERWACJI }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_REZERWACJI }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_REZERWACJI })
+        </td>
+    </tr>
+}
+
+</table>

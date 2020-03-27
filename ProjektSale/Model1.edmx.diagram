@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="00dce14ed8d4452fade2cab287cc3f9d" Name="Diagram1" ZoomLevel="105">
+        <EntityTypeShape EntityType="ProjektSaleModel.BIURA" Width="1.5" PointX="7.125" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjektSaleModel.KIERUNKI" Width="1.5" PointX="6.875" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjektSaleModel.PRACOWNICY" Width="1.5" PointX="9.375" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjektSaleModel.PRZEDMIOTY" Width="1.5" PointX="11.625" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjektSaleModel.REZERWACJE" Width="1.5" PointX="11.625" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjektSaleModel.SALE" Width="1.5" PointX="9.375" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjektSaleModel.STUDENCI" Width="1.5" PointX="9.25" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjektSaleModel.sysdiagrams" Width="1.5" PointX="14.25" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjektSaleModel.PracownicyPracownicze" Width="1.375" PointX="13.5" PointY="2.625" IsExpanded="true" />
+        <AssociationConnector Association="ProjektSaleModel.PRACOWNIK_BIURO_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjektSaleModel.STUDENT_KIERUNEK_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjektSaleModel.PRACOWNIK_PRACOWNIK_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjektSaleModel.REZERWACJE_PRACOWNIK_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjektSaleModel.PRZEDMIOT_SALA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjektSaleModel.REZERWACJE_SALA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjektSaleModel.REZERWACJE_STUDENT_FK" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ProjektSaleModel.osobyZarzadzanie" Width="1.5" PointX="15.125" PointY="2.625" />
+        <EntityTypeShape EntityType="ProjektSaleModel.rezerwacjeImprezowa" Width="1.5" PointX="14.5" PointY="4.625" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

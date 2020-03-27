@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2730CAE0-8695-D288-204D-4DBAB1DCCB5B" name="REZERWACJE">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:27:56 UTC</createdTime>
+<ownerDesignName>SALE</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_REZERWACJI" id="8EA36FFC-C309-D7DA-6121-A3FF764894CF">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:28:05 UTC</createdTime>
+<ownerDesignName>SALE</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="REZERWACJA_OD" id="757AE86D-A0E7-F2F4-D446-97634AE1D722">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:28:05 UTC</createdTime>
+<ownerDesignName>SALE</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="REZERWACJA_DO" id="42291688-ACBA-CD25-E5FB-A5B55FA64BEE">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:28:05 UTC</createdTime>
+<ownerDesignName>SALE</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CENA" id="B2305768-8391-76CE-E13D-0CD481D8FA3A">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:28:05 UTC</createdTime>
+<ownerDesignName>SALE</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NR_ALBUMU" id="7CAA7D71-6E7E-598B-D114-2F6BD23BDB87">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:29:09 UTC</createdTime>
+<generatorID>F7389E86-AFE3-0E7C-7930-27BD2DA04ED4</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<referedAttribute>F9FAED8C-110D-BDB2-7127-16121E898933</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_SALI" id="CB95CA80-BD76-0BC1-BAEC-4DE7ACFA9669">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:32:49 UTC</createdTime>
+<generatorID>087EE726-F922-B32D-FC48-3F083FB5D4F3</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<referedAttribute>1472AC9F-8DD4-2303-69C0-B8BEB4F94174</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_PRACOWNIKA" id="945C9047-AE2A-F842-3FCB-6ED7DD7D5756">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:50:20 UTC</createdTime>
+<generatorID>D9D56268-4EA8-B2A7-3F6F-123D6D649A34</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<referedAttribute>50B62862-C77E-44B5-561A-234B9BA2EC43</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="FEAFF46D-DEFE-6B51-3830-1E33D2D0EDBA" name="REZERWACJE PK">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:28:16 UTC</createdTime>
+<ownerDesignName>SALE</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>8EA36FFC-C309-D7DA-6121-A3FF764894CF</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<ProjektSale.KIERUNKI>
+
+@{
+    ViewBag.Title = "Kierunki";
+}
+
+<h2>Lista kierunków</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NAZWA_KIERUNKU)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TYP_STUDIOW)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CZAS_TRWANIA)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NAZWA_KIERUNKU)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TYP_STUDIOW)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CZAS_TRWANIA)
+        </td>
+        <td>
+            @Html.ActionLink("Edytuj", "Edit", new { id=item.ID_KIERUNKU }) |
+            @Html.ActionLink("Szczegóły", "Details", new { id=item.ID_KIERUNKU }) |
+            @Html.ActionLink("Usuń", "Delete", new { id=item.ID_KIERUNKU })
+        </td>
+    </tr>
+}
+
+</table>

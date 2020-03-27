@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7D011B2E-39DE-A4C6-3CF7-E4CE8D624F6A" name="PRZEDMIOT">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:33:09 UTC</createdTime>
+<ownerDesignName>SALE</ownerDesignName>
+<engineerTo>
+<item key="E9C43327-9D91-2A94-633A-1E1F15F95835" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_PRZEDMIOTU" id="EB3FA0AB-D2A5-6834-D265-8730799293EE">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:33:15 UTC</createdTime>
+<ownerDesignName>SALE</ownerDesignName>
+<engineerTo>
+<item key="E9C43327-9D91-2A94-633A-1E1F15F95835" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NAZWA" id="08D1444D-DBFC-7F33-02EB-D8429AF01701">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:33:16 UTC</createdTime>
+<ownerDesignName>SALE</ownerDesignName>
+<engineerTo>
+<item key="E9C43327-9D91-2A94-633A-1E1F15F95835" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ILOSC" id="109D6504-3138-688B-E546-346F6BBFA4FF">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 16:48:28 UTC</createdTime>
+<ownerDesignName>SALE</ownerDesignName>
+<engineerTo>
+<item key="E9C43327-9D91-2A94-633A-1E1F15F95835" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="OPIS" id="BC211C58-2C3C-757F-64ED-7270CE4EE3AE">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:33:16 UTC</createdTime>
+<ownerDesignName>SALE</ownerDesignName>
+<engineerTo>
+<item key="E9C43327-9D91-2A94-633A-1E1F15F95835" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT028</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_SALI" id="042F3992-B2D7-51A1-0A83-5276AD96E78D">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:34:14 UTC</createdTime>
+<generatorID>C593BBA4-48A4-5D4B-E8BD-119B7F6935A4</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<engineerTo>
+<item key="E9C43327-9D91-2A94-633A-1E1F15F95835" value="true"/>
+</engineerTo>
+<referedAttribute>1472AC9F-8DD4-2303-69C0-B8BEB4F94174</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="3C155689-9970-AFEE-5FD5-F97DBE903469" name="PRZEDMIOT PK">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:33:50 UTC</createdTime>
+<ownerDesignName>SALE</ownerDesignName>
+<engineerTo>
+<item key="E9C43327-9D91-2A94-633A-1E1F15F95835" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>EB3FA0AB-D2A5-6834-D265-8730799293EE</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

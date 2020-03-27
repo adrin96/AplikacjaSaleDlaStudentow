@@ -1,0 +1,127 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9B195665-66D9-777D-F747-95CDE8648046" name="PRACOWNIK">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:49:09 UTC</createdTime>
+<ownerDesignName>SALE</ownerDesignName>
+<engineerTo>
+<item key="E9C43327-9D91-2A94-633A-1E1F15F95835" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_PRACOWNIKA" id="50B62862-C77E-44B5-561A-234B9BA2EC43">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:49:09 UTC</createdTime>
+<ownerDesignName>SALE</ownerDesignName>
+<engineerTo>
+<item key="E9C43327-9D91-2A94-633A-1E1F15F95835" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="IMIE" id="925D24FC-D361-F6D3-4F1D-99BE3581ACB9">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:49:09 UTC</createdTime>
+<ownerDesignName>SALE</ownerDesignName>
+<engineerTo>
+<item key="E9C43327-9D91-2A94-633A-1E1F15F95835" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NAZWISKO" id="D250D8D2-1571-70F9-B27F-AB7CB769B5C2">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:49:09 UTC</createdTime>
+<ownerDesignName>SALE</ownerDesignName>
+<engineerTo>
+<item key="E9C43327-9D91-2A94-633A-1E1F15F95835" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DATA_ZATRUDNIENIA" id="1A98BF03-D69D-2B1D-23D6-589710C3BFD5">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:49:09 UTC</createdTime>
+<ownerDesignName>SALE</ownerDesignName>
+<engineerTo>
+<item key="E9C43327-9D91-2A94-633A-1E1F15F95835" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PENSJA" id="579FB67A-66CC-5020-9BA7-7C7FA1734B01">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:49:09 UTC</createdTime>
+<ownerDesignName>SALE</ownerDesignName>
+<engineerTo>
+<item key="E9C43327-9D91-2A94-633A-1E1F15F95835" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_BIURA" id="7BC0A84A-C751-7C3B-E3D1-013A238C2F29">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:49:39 UTC</createdTime>
+<generatorID>6F3AE290-539B-BA6D-E878-697E2611D444</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<engineerTo>
+<item key="E9C43327-9D91-2A94-633A-1E1F15F95835" value="true"/>
+</engineerTo>
+<referedAttribute>67FB0340-95D9-909C-8C73-150D7096C959</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_PRZELOZONEGO" id="9FAD452A-A9F9-7802-6480-1B61422D86CB">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:50:49 UTC</createdTime>
+<generatorID>33E977BF-4B3E-2A3E-B424-BDAE09AD9F70</generatorID>
+<ownerDesignName>SALE</ownerDesignName>
+<engineerTo>
+<item key="E9C43327-9D91-2A94-633A-1E1F15F95835" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>50B62862-C77E-44B5-561A-234B9BA2EC43</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1621A8F3-1BBF-7819-82B4-46F3C5508F0B" name="PRACOWNIK PK">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:49:09 UTC</createdTime>
+<ownerDesignName>SALE</ownerDesignName>
+<engineerTo>
+<item key="E9C43327-9D91-2A94-633A-1E1F15F95835" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>50B62862-C77E-44B5-561A-234B9BA2EC43</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

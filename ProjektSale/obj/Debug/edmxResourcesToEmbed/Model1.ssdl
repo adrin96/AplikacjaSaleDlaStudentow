@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProjektSaleModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BIURA">
+    <Key>
+      <PropertyRef Name="ID_BIURA" />
+    </Key>
+    <Property Name="ID_BIURA" Type="int" Nullable="false" />
+    <Property Name="NAZWA" Type="varchar" MaxLength="30" />
+    <Property Name="ADRES" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KIERUNKI">
+    <Key>
+      <PropertyRef Name="ID_KIERUNKU" />
+    </Key>
+    <Property Name="ID_KIERUNKU" Type="int" Nullable="false" />
+    <Property Name="NAZWA_KIERUNKU" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="TYP_STUDIOW" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="CZAS_TRWANIA" Type="numeric" Precision="4" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PRACOWNICY">
+    <Key>
+      <PropertyRef Name="ID_PRACOWNIKA" />
+    </Key>
+    <Property Name="ID_PRACOWNIKA" Type="int" Nullable="false" />
+    <Property Name="IMIE" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="NAZWISKO" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="PENSJA" Type="real" Nullable="false" />
+    <Property Name="DATA_ZATRUDNIENIA" Type="date" />
+    <Property Name="ID_BIURA" Type="int" Nullable="false" />
+    <Property Name="ID_PRZELOZONEGO" Type="int" />
+    <Property Name="STANOWISKO" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="PRZEDMIOTY">
+    <Key>
+      <PropertyRef Name="ID_PRZEDMIOTU" />
+    </Key>
+    <Property Name="ID_PRZEDMIOTU" Type="int" Nullable="false" />
+    <Property Name="NAZWA" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="OPIS" Type="text" />
+    <Property Name="ILOSC" Type="numeric" Precision="4" Scale="0" Nullable="false" />
+    <Property Name="ID_SALI" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="REZERWACJE">
+    <Key>
+      <PropertyRef Name="ID_REZERWACJI" />
+    </Key>
+    <Property Name="ID_REZERWACJI" Type="int" Nullable="false" />
+    <Property Name="REZERWACJA_OD" Type="date" Nullable="false" />
+    <Property Name="REZERWACJA_DO" Type="date" />
+    <Property Name="CENA" Type="real" Nullable="false" />
+    <Property Name="NR_ALBUMU" Type="int" Nullable="false" />
+    <Property Name="ID_SALI" Type="int" Nullable="false" />
+    <Property Name="ID_PRACOWNIKA" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SALE">
+    <Key>
+      <PropertyRef Name="ID_SALI" />
+    </Key>
+    <Property Name="ID_SALI" Type="int" Nullable="false" />
+    <Property Name="NAZWA" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="OPIS" Type="text" />
+  </EntityType>
+  <EntityType Name="STUDENCI">
+    <Key>
+      <PropertyRef Name="NR_ALBUMU" />
+    </Key>
+    <Property Name="NR_ALBUMU" Type="int" Nullable="false" />
+    <Property Name="IMIE" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="NAZWISKO" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="NR_TELEFONU" Type="numeric" Precision="9" Scale="0" />
+    <Property Name="ID_KIERUNKU" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ProjektSale.dbo.osobyZarzadzanie' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="osobyZarzadzanie">
+    <Key>
+      <PropertyRef Name="Imie" />
+      <PropertyRef Name="Nazwisko" />
+      <PropertyRef Name="Nr_albumu" />
+    </Key>
+    <Property Name="Imie" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Nazwisko" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Nr_albumu" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ProjektSale.dbo.PracownicyPracownicze' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PracownicyPracownicze">
+    <Key>
+      <PropertyRef Name="Imie" />
+      <PropertyRef Name="Nazwisko" />
+    </Key>
+    <Property Name="NazwaBiura" Type="varchar" MaxLength="30" />
+    <Property Name="Adres" Type="varchar" MaxLength="255" />
+    <Property Name="Imie" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Nazwisko" Type="varchar" MaxLength="25" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ProjektSale.dbo.rezerwacjeImprezowa' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="rezerwacjeImprezowa">
+    <Key>
+      <PropertyRef Name="ImieStudenta" />
+      <PropertyRef Name="NazwiskoStudenta" />
+      <PropertyRef Name="Nr_albumu" />
+      <PropertyRef Name="ImiePracownika" />
+      <PropertyRef Name="NazwiskoPracownika" />
+      <PropertyRef Name="Nazwa" />
+    </Key>
+    <Property Name="ImieStudenta" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="NazwiskoStudenta" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Nr_albumu" Type="int" Nullable="false" />
+    <Property Name="ImiePracownika" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="NazwiskoPracownika" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Nazwa" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <Association Name="PRACOWNIK_BIURO_FK">
+    <End Role="BIURA" Type="Self.BIURA" Multiplicity="1" />
+    <End Role="PRACOWNICY" Type="Self.PRACOWNICY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BIURA">
+        <PropertyRef Name="ID_BIURA" />
+      </Principal>
+      <Dependent Role="PRACOWNICY">
+        <PropertyRef Name="ID_BIURA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PRACOWNIK_PRACOWNIK_FK">
+    <End Role="PRACOWNICY" Type="Self.PRACOWNICY" Multiplicity="0..1" />
+    <End Role="PRACOWNICY1" Type="Self.PRACOWNICY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRACOWNICY">
+        <PropertyRef Name="ID_PRACOWNIKA" />
+      </Principal>
+      <Dependent Role="PRACOWNICY1">
+        <PropertyRef Name="ID_PRZELOZONEGO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PRZEDMIOT_SALA_FK">
+    <End Role="SALE" Type="Self.SALE" Multiplicity="1" />
+    <End Role="PRZEDMIOTY" Type="Self.PRZEDMIOTY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SALE">
+        <PropertyRef Name="ID_SALI" />
+      </Principal>
+      <Dependent Role="PRZEDMIOTY">
+        <PropertyRef Name="ID_SALI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="REZERWACJE_PRACOWNIK_FK">
+    <End Role="PRACOWNICY" Type="Self.PRACOWNICY" Multiplicity="1" />
+    <End Role="REZERWACJE" Type="Self.REZERWACJE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRACOWNICY">
+        <PropertyRef Name="ID_PRACOWNIKA" />
+      </Principal>
+      <Dependent Role="REZERWACJE">
+        <PropertyRef Name="ID_PRACOWNIKA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="REZERWACJE_SALA_FK">
+    <End Role="SALE" Type="Self.SALE" Multiplicity="1" />
+    <End Role="REZERWACJE" Type="Self.REZERWACJE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SALE">
+        <PropertyRef Name="ID_SALI" />
+      </Principal>
+      <Dependent Role="REZERWACJE">
+        <PropertyRef Name="ID_SALI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="REZERWACJE_STUDENT_FK">
+    <End Role="STUDENCI" Type="Self.STUDENCI" Multiplicity="1" />
+    <End Role="REZERWACJE" Type="Self.REZERWACJE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="STUDENCI">
+        <PropertyRef Name="NR_ALBUMU" />
+      </Principal>
+      <Dependent Role="REZERWACJE">
+        <PropertyRef Name="NR_ALBUMU" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="STUDENT_KIERUNEK_FK">
+    <End Role="KIERUNKI" Type="Self.KIERUNKI" Multiplicity="1" />
+    <End Role="STUDENCI" Type="Self.STUDENCI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KIERUNKI">
+        <PropertyRef Name="ID_KIERUNKU" />
+      </Principal>
+      <Dependent Role="STUDENCI">
+        <PropertyRef Name="ID_KIERUNKU" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="ProjektSaleModelStoreContainer">
+    <EntitySet Name="BIURA" EntityType="Self.BIURA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KIERUNKI" EntityType="Self.KIERUNKI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PRACOWNICY" EntityType="Self.PRACOWNICY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PRZEDMIOTY" EntityType="Self.PRZEDMIOTY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="REZERWACJE" EntityType="Self.REZERWACJE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SALE" EntityType="Self.SALE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="STUDENCI" EntityType="Self.STUDENCI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="osobyZarzadzanie" EntityType="Self.osobyZarzadzanie" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [osobyZarzadzanie].[Imie] AS [Imie], 
+    [osobyZarzadzanie].[Nazwisko] AS [Nazwisko], 
+    [osobyZarzadzanie].[Nr_albumu] AS [Nr_albumu]
+    FROM [dbo].[osobyZarzadzanie] AS [osobyZarzadzanie]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PracownicyPracownicze" EntityType="Self.PracownicyPracownicze" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [PracownicyPracownicze].[NazwaBiura] AS [NazwaBiura], 
+    [PracownicyPracownicze].[Adres] AS [Adres], 
+    [PracownicyPracownicze].[Imie] AS [Imie], 
+    [PracownicyPracownicze].[Nazwisko] AS [Nazwisko]
+    FROM [dbo].[PracownicyPracownicze] AS [PracownicyPracownicze]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="rezerwacjeImprezowa" EntityType="Self.rezerwacjeImprezowa" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [rezerwacjeImprezowa].[ImieStudenta] AS [ImieStudenta], 
+    [rezerwacjeImprezowa].[NazwiskoStudenta] AS [NazwiskoStudenta], 
+    [rezerwacjeImprezowa].[Nr_albumu] AS [Nr_albumu], 
+    [rezerwacjeImprezowa].[ImiePracownika] AS [ImiePracownika], 
+    [rezerwacjeImprezowa].[NazwiskoPracownika] AS [NazwiskoPracownika], 
+    [rezerwacjeImprezowa].[Nazwa] AS [Nazwa]
+    FROM [dbo].[rezerwacjeImprezowa] AS [rezerwacjeImprezowa]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="PRACOWNIK_BIURO_FK" Association="Self.PRACOWNIK_BIURO_FK">
+      <End Role="BIURA" EntitySet="BIURA" />
+      <End Role="PRACOWNICY" EntitySet="PRACOWNICY" />
+    </AssociationSet>
+    <AssociationSet Name="PRACOWNIK_PRACOWNIK_FK" Association="Self.PRACOWNIK_PRACOWNIK_FK">
+      <End Role="PRACOWNICY" EntitySet="PRACOWNICY" />
+      <End Role="PRACOWNICY1" EntitySet="PRACOWNICY" />
+    </AssociationSet>
+    <AssociationSet Name="PRZEDMIOT_SALA_FK" Association="Self.PRZEDMIOT_SALA_FK">
+      <End Role="SALE" EntitySet="SALE" />
+      <End Role="PRZEDMIOTY" EntitySet="PRZEDMIOTY" />
+    </AssociationSet>
+    <AssociationSet Name="REZERWACJE_PRACOWNIK_FK" Association="Self.REZERWACJE_PRACOWNIK_FK">
+      <End Role="PRACOWNICY" EntitySet="PRACOWNICY" />
+      <End Role="REZERWACJE" EntitySet="REZERWACJE" />
+    </AssociationSet>
+    <AssociationSet Name="REZERWACJE_SALA_FK" Association="Self.REZERWACJE_SALA_FK">
+      <End Role="SALE" EntitySet="SALE" />
+      <End Role="REZERWACJE" EntitySet="REZERWACJE" />
+    </AssociationSet>
+    <AssociationSet Name="REZERWACJE_STUDENT_FK" Association="Self.REZERWACJE_STUDENT_FK">
+      <End Role="STUDENCI" EntitySet="STUDENCI" />
+      <End Role="REZERWACJE" EntitySet="REZERWACJE" />
+    </AssociationSet>
+    <AssociationSet Name="STUDENT_KIERUNEK_FK" Association="Self.STUDENT_KIERUNEK_FK">
+      <End Role="KIERUNKI" EntitySet="KIERUNKI" />
+      <End Role="STUDENCI" EntitySet="STUDENCI" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

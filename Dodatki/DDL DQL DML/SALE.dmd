@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="SALE" id="74FE4175-4192-CB73-7282-B096A3D90CDD" version="3.5">
+<createdBy>AiXen</createdBy>
+<createdTime>2019-12-18 11:07:26 UTC</createdTime>
+<ownerDesignName>SALE</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>74FE4175-4192-CB73-7282-B096A3D90CDD</designId>
+</OSDM_Design>
