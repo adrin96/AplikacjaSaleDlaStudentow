@@ -21,8 +21,8 @@
         <AssociationConnector Association="ProjektSaleModel.PRZEDMIOT_SALA_FK" ManuallyRouted="false" />
         <AssociationConnector Association="ProjektSaleModel.REZERWACJE_SALA_FK" ManuallyRouted="false" />
         <AssociationConnector Association="ProjektSaleModel.REZERWACJE_STUDENT_FK" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="ProjektSaleModel.osobyZarzadzanie" Width="1.5" PointX="15.125" PointY="2.625" />
-        <EntityTypeShape EntityType="ProjektSaleModel.rezerwacjeImprezowa" Width="1.5" PointX="14.5" PointY="4.625" />
+        <EntityTypeShape EntityType="ProjektSaleModel.osobyZarzadzanie" Width="2.375" PointX="15.5" PointY="2.375" />
+        <EntityTypeShape EntityType="ProjektSaleModel.rezerwacjeImprezowa" Width="1.5" PointX="14.75" PointY="4.5" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
