@@ -1,0 +1,96 @@
+USE [ProjektSale]
+GO
+INSERT [dbo].[KIERUNKI] ([ID_KIERUNKU], [NAZWA_KIERUNKU], [TYP_STUDIOW], [CZAS_TRWANIA]) VALUES (1, N'Informatyka', N'Inzynierskie   ', CAST(3.50 AS Numeric(4, 2)))
+GO
+INSERT [dbo].[KIERUNKI] ([ID_KIERUNKU], [NAZWA_KIERUNKU], [TYP_STUDIOW], [CZAS_TRWANIA]) VALUES (2, N'Zarzadzanie', N'Licencjackie   ', CAST(3.00 AS Numeric(4, 2)))
+GO
+INSERT [dbo].[KIERUNKI] ([ID_KIERUNKU], [NAZWA_KIERUNKU], [TYP_STUDIOW], [CZAS_TRWANIA]) VALUES (3, N'Pedagogika', N'Licencjackie   ', CAST(3.00 AS Numeric(4, 2)))
+GO
+INSERT [dbo].[KIERUNKI] ([ID_KIERUNKU], [NAZWA_KIERUNKU], [TYP_STUDIOW], [CZAS_TRWANIA]) VALUES (4, N'Polonistyka', N'Licencjackie   ', CAST(3.00 AS Numeric(4, 2)))
+GO
+INSERT [dbo].[KIERUNKI] ([ID_KIERUNKU], [NAZWA_KIERUNKU], [TYP_STUDIOW], [CZAS_TRWANIA]) VALUES (5, N'Filologia angielska', N'Licencjackie   ', CAST(3.00 AS Numeric(4, 2)))
+GO
+INSERT [dbo].[KIERUNKI] ([ID_KIERUNKU], [NAZWA_KIERUNKU], [TYP_STUDIOW], [CZAS_TRWANIA]) VALUES (6, N'Budownictwo', N'Inzynierskie   ', CAST(3.50 AS Numeric(4, 2)))
+GO
+INSERT [dbo].[KIERUNKI] ([ID_KIERUNKU], [NAZWA_KIERUNKU], [TYP_STUDIOW], [CZAS_TRWANIA]) VALUES (7, N'Energetyka', N'Inzynierskie   ', CAST(3.50 AS Numeric(4, 2)))
+GO
+INSERT [dbo].[KIERUNKI] ([ID_KIERUNKU], [NAZWA_KIERUNKU], [TYP_STUDIOW], [CZAS_TRWANIA]) VALUES (8, N'Mechanika', N'Inzynierskie   ', CAST(3.50 AS Numeric(4, 2)))
+GO
+INSERT [dbo].[KIERUNKI] ([ID_KIERUNKU], [NAZWA_KIERUNKU], [TYP_STUDIOW], [CZAS_TRWANIA]) VALUES (9, N'Zielarstwo', N'Inzynierskie   ', CAST(3.50 AS Numeric(4, 2)))
+GO
+INSERT [dbo].[KIERUNKI] ([ID_KIERUNKU], [NAZWA_KIERUNKU], [TYP_STUDIOW], [CZAS_TRWANIA]) VALUES (10, N'Pielegniarstwo', N'Licencjackie   ', CAST(5.00 AS Numeric(4, 2)))
+GO
+INSERT [dbo].[STUDENCI] ([NR_ALBUMU], [IMIE], [NAZWISKO], [NR_TELEFONU], [ID_KIERUNKU]) VALUES (23521, N'Baka', N'Zuzanna', CAST(345872842 AS Numeric(9, 0)), 1)
+GO
+INSERT [dbo].[STUDENCI] ([NR_ALBUMU], [IMIE], [NAZWISKO], [NR_TELEFONU], [ID_KIERUNKU]) VALUES (23821, N'Adrian', N'K', CAST(667283440 AS Numeric(9, 0)), 1)
+GO
+INSERT [dbo].[STUDENCI] ([NR_ALBUMU], [IMIE], [NAZWISKO], [NR_TELEFONU], [ID_KIERUNKU]) VALUES (23822, N'Mateusz', N'Borowiec', CAST(123456789 AS Numeric(9, 0)), 1)
+GO
+INSERT [dbo].[STUDENCI] ([NR_ALBUMU], [IMIE], [NAZWISKO], [NR_TELEFONU], [ID_KIERUNKU]) VALUES (23823, N'Tymon', N'Choromański', NULL, 1)
+GO
+INSERT [dbo].[STUDENCI] ([NR_ALBUMU], [IMIE], [NAZWISKO], [NR_TELEFONU], [ID_KIERUNKU]) VALUES (23824, N'Joanna', N'Kurpka', NULL, 1)
+GO
+INSERT [dbo].[STUDENCI] ([NR_ALBUMU], [IMIE], [NAZWISKO], [NR_TELEFONU], [ID_KIERUNKU]) VALUES (24321, N'Joanna', N'Ząbek', NULL, 2)
+GO
+INSERT [dbo].[STUDENCI] ([NR_ALBUMU], [IMIE], [NAZWISKO], [NR_TELEFONU], [ID_KIERUNKU]) VALUES (24322, N'Maria', N'Pas', NULL, 2)
+GO
+INSERT [dbo].[STUDENCI] ([NR_ALBUMU], [IMIE], [NAZWISKO], [NR_TELEFONU], [ID_KIERUNKU]) VALUES (24323, N'Łukasz', N'Jaki', NULL, 2)
+GO
+INSERT [dbo].[STUDENCI] ([NR_ALBUMU], [IMIE], [NAZWISKO], [NR_TELEFONU], [ID_KIERUNKU]) VALUES (24324, N'Adam', N'Mak', CAST(123456731 AS Numeric(9, 0)), 2)
+GO
+INSERT [dbo].[STUDENCI] ([NR_ALBUMU], [IMIE], [NAZWISKO], [NR_TELEFONU], [ID_KIERUNKU]) VALUES (24325, N'Adrian', N'Nowak', CAST(772866371 AS Numeric(9, 0)), 5)
+GO
+INSERT [dbo].[STUDENCI] ([NR_ALBUMU], [IMIE], [NAZWISKO], [NR_TELEFONU], [ID_KIERUNKU]) VALUES (24326, N'Barańska', N'Natalia', CAST(772866321 AS Numeric(9, 0)), 6)
+GO
+INSERT [dbo].[STUDENCI] ([NR_ALBUMU], [IMIE], [NAZWISKO], [NR_TELEFONU], [ID_KIERUNKU]) VALUES (24327, N'Julia', N'Prokop', CAST(772866321 AS Numeric(9, 0)), 7)
+GO
+INSERT [dbo].[STUDENCI] ([NR_ALBUMU], [IMIE], [NAZWISKO], [NR_TELEFONU], [ID_KIERUNKU]) VALUES (24329, N'Adam', N'Krzak', CAST(772866321 AS Numeric(9, 0)), 8)
+GO
+INSERT [dbo].[STUDENCI] ([NR_ALBUMU], [IMIE], [NAZWISKO], [NR_TELEFONU], [ID_KIERUNKU]) VALUES (24330, N'Natalia', N'Kotek', CAST(662752422 AS Numeric(9, 0)), 8)
+GO
+INSERT [dbo].[STUDENCI] ([NR_ALBUMU], [IMIE], [NAZWISKO], [NR_TELEFONU], [ID_KIERUNKU]) VALUES (24335, N'Mateusz', N'Gabor', CAST(732865432 AS Numeric(9, 0)), 9)
+GO
+INSERT [dbo].[BIURA] ([ID_BIURA], [NAZWA], [ADRES]) VALUES (1, N'Glowne', N'Warszawa ul.Kwiatkowska 32')
+GO
+INSERT [dbo].[BIURA] ([ID_BIURA], [NAZWA], [ADRES]) VALUES (2, N'Pracownicze', N'Krosno ul.Podkarpacka 32')
+GO
+INSERT [dbo].[PRACOWNICY] ([ID_PRACOWNIKA], [IMIE], [NAZWISKO], [PENSJA], [DATA_ZATRUDNIENIA], [ID_BIURA], [ID_PRZELOZONEGO], [STANOWISKO]) VALUES (1, N'Adam', N'Szefowski', 3500, CAST(N'2003-12-18' AS Date), 1, NULL, N'Kierownik')
+GO
+INSERT [dbo].[PRACOWNICY] ([ID_PRACOWNIKA], [IMIE], [NAZWISKO], [PENSJA], [DATA_ZATRUDNIENIA], [ID_BIURA], [ID_PRZELOZONEGO], [STANOWISKO]) VALUES (2, N'Katarzyna', N'Cios', 2100, CAST(N'2019-12-19' AS Date), 2, 1, N'Recepcjonista')
+GO
+INSERT [dbo].[PRACOWNICY] ([ID_PRACOWNIKA], [IMIE], [NAZWISKO], [PENSJA], [DATA_ZATRUDNIENIA], [ID_BIURA], [ID_PRZELOZONEGO], [STANOWISKO]) VALUES (3, N'Andrzej', N'Mazur', 0, CAST(N'2020-01-20' AS Date), 2, 1, NULL)
+GO
+INSERT [dbo].[SALE] ([ID_SALI], [NAZWA], [OPIS]) VALUES (1, N'Konferencyjna', N'W tej sali mogą odbywać się różnego rodzaju spotkania. Mniej lub bardziej oficjalne.')
+GO
+INSERT [dbo].[SALE] ([ID_SALI], [NAZWA], [OPIS]) VALUES (2, N'Imprezowa', N'Sala o dużej powierzchni, którą można wynająć na różnego rodzaju okoliczności studenckie jak Juwenalia.')
+GO
+INSERT [dbo].[SALE] ([ID_SALI], [NAZWA], [OPIS]) VALUES (3, N'Uczelnia', N'Sala do nauki')
+GO
+INSERT [dbo].[REZERWACJE] ([ID_REZERWACJI], [REZERWACJA_OD], [REZERWACJA_DO], [CENA], [NR_ALBUMU], [ID_SALI], [ID_PRACOWNIKA]) VALUES (1, CAST(N'2019-12-19' AS Date), CAST(N'2019-12-21' AS Date), 300, 23821, 2, 2)
+GO
+INSERT [dbo].[PRZEDMIOTY] ([ID_PRZEDMIOTU], [NAZWA], [OPIS], [ILOSC], [ID_SALI]) VALUES (1, N'Kula dyskotekowa', N'Kula typu disco', CAST(1 AS Numeric(4, 0)), 2)
+GO
+INSERT [dbo].[PRZEDMIOTY] ([ID_PRZEDMIOTU], [NAZWA], [OPIS], [ILOSC], [ID_SALI]) VALUES (2, N'Wytwornica Banek', NULL, CAST(3 AS Numeric(4, 0)), 2)
+GO
+INSERT [dbo].[PRZEDMIOTY] ([ID_PRZEDMIOTU], [NAZWA], [OPIS], [ILOSC], [ID_SALI]) VALUES (3, N'Balony', NULL, CAST(300 AS Numeric(4, 0)), 2)
+GO
+INSERT [dbo].[PRZEDMIOTY] ([ID_PRZEDMIOTU], [NAZWA], [OPIS], [ILOSC], [ID_SALI]) VALUES (4, N'Konfetti', NULL, CAST(10 AS Numeric(4, 0)), 2)
+GO
+INSERT [dbo].[PRZEDMIOTY] ([ID_PRZEDMIOTU], [NAZWA], [OPIS], [ILOSC], [ID_SALI]) VALUES (5, N'Glosnik Microlab FC-330', NULL, CAST(1 AS Numeric(4, 0)), 2)
+GO
+INSERT [dbo].[PRZEDMIOTY] ([ID_PRZEDMIOTU], [NAZWA], [OPIS], [ILOSC], [ID_SALI]) VALUES (6, N'Mikrofony', N'Mikrofon konferencyjny', CAST(2 AS Numeric(4, 0)), 1)
+GO
+INSERT [dbo].[PRZEDMIOTY] ([ID_PRZEDMIOTU], [NAZWA], [OPIS], [ILOSC], [ID_SALI]) VALUES (7, N'Telewizor', NULL, CAST(1 AS Numeric(4, 0)), 1)
+GO
+INSERT [dbo].[PRZEDMIOTY] ([ID_PRZEDMIOTU], [NAZWA], [OPIS], [ILOSC], [ID_SALI]) VALUES (8, N'Projektor', NULL, CAST(1 AS Numeric(4, 0)), 1)
+GO
+INSERT [dbo].[PRZEDMIOTY] ([ID_PRZEDMIOTU], [NAZWA], [OPIS], [ILOSC], [ID_SALI]) VALUES (9, N'Dystrybutor wody', NULL, CAST(1 AS Numeric(4, 0)), 1)
+GO
+INSERT [dbo].[PRZEDMIOTY] ([ID_PRZEDMIOTU], [NAZWA], [OPIS], [ILOSC], [ID_SALI]) VALUES (10, N'Glosniki Vk-1050', N'Nagłośnienie całej sali', CAST(1 AS Numeric(4, 0)), 1)
+GO
+INSERT [dbo].[PRZEDMIOTY] ([ID_PRZEDMIOTU], [NAZWA], [OPIS], [ILOSC], [ID_SALI]) VALUES (11, N'Stanowisko komputerowe', N'Bardzo wydajne komputery ', CAST(10 AS Numeric(4, 0)), 3)
+GO
+INSERT [dbo].[PRZEDMIOTY] ([ID_PRZEDMIOTU], [NAZWA], [OPIS], [ILOSC], [ID_SALI]) VALUES (12, N'Drukarka 3w1', NULL, CAST(2 AS Numeric(4, 0)), 3)
+GO
+INSERT [dbo].[PRZEDMIOTY] ([ID_PRZEDMIOTU], [NAZWA], [OPIS], [ILOSC], [ID_SALI]) VALUES (13, N'Pufa', NULL, CAST(5 AS Numeric(4, 0)), 3)
+GO
